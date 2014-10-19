@@ -202,5 +202,5 @@ g6 + geom_bar(stat = "identity", position = position_dodge())
 
 ### Use knit to export md file
 ```r
-knit("README.md", output="README.md", encoding="ISO8859-1", quiet=TRUE)
+knit("README.Rmd", output="README.md", encoding="ISO8859-1", quiet=TRUE)
 ```

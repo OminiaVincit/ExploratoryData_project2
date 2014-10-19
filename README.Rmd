@@ -200,7 +200,7 @@ g6 + geom_bar(stat = "identity", position = position_dodge())
 
 ![plot of chunk plot6](plot6.png)
 
-### Use knit to export md file
+### Use knit to export to md file
 ```r
 knit("README.Rmd", output="README.md", encoding="ISO8859-1", quiet=TRUE)
 ```
