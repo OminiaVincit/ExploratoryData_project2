@@ -27,7 +27,9 @@ dt2 <- SCC[, c(1,4)]
 dtCoal <- merge(dt1, dt2, by.x="SCC", by.y="SCC")[, c(4,6,7)]
 g3 <- ggplot(dtCoal, aes(year, Emissions))
 g3 + geom_point(aes(color = EI.Sector), size = 10, alpha = 0.5) + facet_grid(. ~ EI.Sector) +
-  geom_smooth(color="black", linetype=1, size = 1.5, method = "lm", se = FALSE)
+  geom_smooth(color="black", linetype=1, size = 1.5, method = "lm", se = FALSE) +
+  labs(x="year", y=expression("PM"[2.5]*"Emission (Tons)")) + 
+  labs(title=expression("PM"[2.5]*"Emissions from coal combustion-related sources changed"))
 
 # Close graphic device
 dev.off()

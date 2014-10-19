@@ -26,8 +26,10 @@ png(file="plot3.png", width=800, height=480)
 
 dtBaltimores <- NEI[which(NEI$fips == "24510"),]
 g2 <- ggplot(dtBaltimores, aes(year, Emissions))
-g2 + geom_point(aes(color=type), size = 10, alpha = 0.5) + facet_grid(. ~ type) +
-  geom_smooth(color="black", linetype=1, size = 1.5, method = "lm", se = FALSE)
+g2 + geom_point(aes(color=type), size = 10, alpha = 0.5) + facet_grid(. ~type) + 
+  geom_smooth(color="black", linetype=1, size = 1.5, method = "lm", se = FALSE) + 
+  labs(x="year", y=expression("Total PM"[2.5]*"Emission (Tons)")) + 
+  labs(title=expression("PM"[2.5]*"Emissions, Baltimore City 1999-2008 by Source Type"))
 
 # Close graphic device
 dev.off()
